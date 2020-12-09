@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
-  let message = "Hello World from variable"
+  // let message = "Hello World from variable"
+  const [message, setMessage] = useState('Hello World from hooked state')
   return (
     <>
       <h1>{message}</h1>
