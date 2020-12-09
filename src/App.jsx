@@ -1,9 +1,10 @@
 import React from 'react'
 
 const App = () => {
+  let message = "Hello World from variable"
   return (
     <>
-      <h1>Hello World</h1>
+      <h1>{message}</h1>
     </>
   )
 }
