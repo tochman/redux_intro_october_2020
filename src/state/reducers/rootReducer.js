@@ -1,17 +1,26 @@
 import initialState from '../store/initialState'
 
 const rootReducer = (state = initialState, action) => {
-  if (action.type === "TEST") {
-    debugger
-    return {
-      ...state,
-      message: {
-        greeting: action.payload
+
+  switch (action.type) {
+    case "TEST":
+      return {
+        ...state,
+        message: {
+          greeting: action.payload
+        }
       }
-    }
-  } else {
-    return state
+
+    case "STORE_USERS":
+      return {
+        ...state,
+        users: action.payload
+      }
+
+    default:
+      return state
   }
+
 }
 
 export default rootReducer
